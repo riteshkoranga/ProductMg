@@ -40,4 +40,16 @@ public class productServiceImpl implements service {
         return repo.save(product);
     }
 
+    @Override
+    public Product updateProduct(Product product, Integer id) {
+        Product oldProduct = repo.findById(id).get();
+
+        if (oldProduct != null) {
+            product.setId(id);
+            return repo.save(product);
+        }
+        return null;
+
+    }
+
 }

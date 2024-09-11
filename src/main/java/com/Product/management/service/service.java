@@ -14,4 +14,6 @@ public interface service {
 
     public void deleteProduct(Integer id);
 
+    public Product updateProduct(Product product, Integer id);
+
 }
